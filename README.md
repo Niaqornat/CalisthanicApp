@@ -1,4 +1,4 @@
-# Proje Başlığı
+# CalisthanicApp
 
 Bu projede, kullanıcıların kayıt olup giriş yapabileceği ve
 koşu kulüpleri ile bölgesel koşu yarışları oluşturabileceği bir uygulama geliştirilmiştir.
@@ -18,7 +18,7 @@ isteyen bireyleri kulüpler altında bir araya getirerek, egzersizler düzenleme
 
 ## Ana Ekran
 
-Ana ekran, kullanıcıların giriş yaptıktan sonra karşılaştığı ilk ekrandır. Bu ekranda kullanıcılar, mevcut egzersizlerini görüntüleyebilir ve yeni egzersizler ekleyebilir.
+Ana ekran, kullanıcıların giriş yaptıktan sonra karşılaştığı ilk ekrandır. Bu ekranda kullanıcılar, Konumlarındaki mevcut külüpleri görüntüleyebilir.
 
 ![Ana Ekran](https://github.com/user-attachments/assets/96bd7a78-d74f-468a-941f-cf9e1068cf16)
 
@@ -42,6 +42,6 @@ Kayıt ekranı, yeni kullanıcıların uygulamaya kaydolabileceği ekrandır.
 
 ## Kullanıcılar Ekranı
 
-Kullanıcılar ekranı, yöneticilerin tüm kullanıcıları görüntüleyebileceği ve yönetebileceği ekrandır.
+Kullanıcılar ekranı, giriş yapanların tüm kullanıcıları görüntüleyebileceği ekrandır.
 
 ![Kullanıcılar Ekranı](https://github.com/user-attachments/assets/fea6127c-8b3e-4b48-852b-83e9528ff078)
