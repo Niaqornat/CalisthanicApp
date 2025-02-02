@@ -1,6 +1,37 @@
-![database diagram](https://github.com/user-attachments/assets/bbf89983-6f42-4f40-a0d9-fc89e5c134ab)
+# Proje Başlığı
+
+Bu proje, kullanıcıların egzersizlerini takip edebileceği bir uygulamadır. Aşağıda projenin farklı ekranları ve veritabanı diyagramı bulunmaktadır.
+
+## Veritabanı Diyagramı
+
+![Veritabanı Diyagramı](https://github.com/user-attachments/assets/bbf89983-6f42-4f40-a0d9-fc89e5c134ab)
+
+## Ana Ekran
+
+Ana ekran, kullanıcıların giriş yaptıktan sonra karşılaştığı ilk ekrandır. Bu ekranda kullanıcılar, mevcut egzersizlerini görüntüleyebilir ve yeni egzersizler ekleyebilir.
+
 ![Ana Ekran](https://github.com/user-attachments/assets/96bd7a78-d74f-468a-941f-cf9e1068cf16)
-![exercise screen](https://github.com/user-attachments/assets/391dfde6-49b7-4de0-8957-057aa31cc444)
-![Login Screen](https://github.com/user-attachments/assets/c297f9d7-894e-4725-ba6e-3f3937e0a9ca)
-![Register Screen](https://github.com/user-attachments/assets/f6ff5de4-fba9-42b6-866d-b043242bd155)
-![Users Screen](https://github.com/user-attachments/assets/fea6127c-8b3e-4b48-852b-83e9528ff078)
+
+## Egzersiz Ekranı
+
+Egzersiz ekranı, kullanıcıların belirli bir egzersizi detaylı olarak görüntüleyebileceği ve düzenleyebileceği ekrandır.
+
+![Egzersiz Ekranı](https://github.com/user-attachments/assets/391dfde6-49b7-4de0-8957-057aa31cc444)
+
+## Giriş Ekranı
+
+Giriş ekranı, kullanıcıların uygulamaya erişmek için giriş yapabileceği ekrandır.
+
+![Giriş Ekranı](https://github.com/user-attachments/assets/c297f9d7-894e-4725-ba6e-3f3937e0a9ca)
+
+## Kayıt Ekranı
+
+Kayıt ekranı, yeni kullanıcıların uygulamaya kaydolabileceği ekrandır.
+
+![Kayıt Ekranı](https://github.com/user-attachments/assets/f6ff5de4-fba9-42b6-866d-b043242bd155)
+
+## Kullanıcılar Ekranı
+
+Kullanıcılar ekranı, yöneticilerin tüm kullanıcıları görüntüleyebileceği ve yönetebileceği ekrandır.
+
+![Kullanıcılar Ekranı](https://github.com/user-attachments/assets/fea6127c-8b3e-4b48-852b-83e9528ff078)
