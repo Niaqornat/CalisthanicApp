@@ -1,0 +1,6 @@
+![database diagram](https://github.com/user-attachments/assets/bbf89983-6f42-4f40-a0d9-fc89e5c134ab)
+![Ana Ekran](https://github.com/user-attachments/assets/96bd7a78-d74f-468a-941f-cf9e1068cf16)
+![exercise screen](https://github.com/user-attachments/assets/391dfde6-49b7-4de0-8957-057aa31cc444)
+![Login Screen](https://github.com/user-attachments/assets/c297f9d7-894e-4725-ba6e-3f3937e0a9ca)
+![Register Screen](https://github.com/user-attachments/assets/f6ff5de4-fba9-42b6-866d-b043242bd155)
+![Users Screen](https://github.com/user-attachments/assets/fea6127c-8b3e-4b48-852b-83e9528ff078)
