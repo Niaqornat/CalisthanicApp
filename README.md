@@ -1,6 +1,16 @@
 # Proje Başlığı
 
-Bu proje, kullanıcıların egzersizlerini takip edebileceği bir uygulamadır. Aşağıda projenin farklı ekranları ve veritabanı diyagramı bulunmaktadır.
+Bu projede, kullanıcıların kayıt olup giriş yapabileceği ve
+koşu kulüpleri ile bölgesel koşu yarışları oluşturabileceği bir uygulama geliştirilmiştir.
+Külüplere ve koşu yarışlarınına görüntü yüklenebiliyor ve açıklama yazılabiliyor.
+Kullanıcılar, kendi profillerini oluşturabilir ve profil fotoğraflarını yükleyebilirler.
+Yüklenen profil fotoğrafları, bulut ortamında saklanmaktadır. Kullanıcılar, kendi
+sayfalarından katıldıkları egzersizleri ve oluşturdukları kulüpleri görüntüleyebilirler. Giriş
+yapan kullanıcılar ayrıca, sisteme kayıtlı olan kullanıcıların sayısını görebilir ve
+profillerine erişebilirler. Uygulamanın ana ekranında, giriş yapan kullanıcının IP adresi
+kullanılarak, bulunduğu konumdaki kulüpler listelenir. Admin giriş yaptıktan
+sonra kulüpler ve egzersizler düzenlenebilir ve silinebilir. Projenin temel amacı, calisthanic egzersizi yapmak
+isteyen bireyleri kulüpler altında bir araya getirerek, egzersizler düzenlemektir. 
 
 ## Veritabanı Diyagramı
 
