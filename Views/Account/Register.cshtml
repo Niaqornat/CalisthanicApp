@@ -1,0 +1,38 @@
+﻿@using CalisthenicsApp.ViewModels
+@model RegisterViewModel
+@addTagHelper *, RunnerApp
+
+@{
+    ViewData["Title"] = "Sign up";
+}
+
+<div class="row">
+    <div class="col-md-6 offset-3">
+        <h4>Sign up for a new account</h4>
+
+        @if (TempData["Error"] != null)
+        {
+            <div class="col-md-12 alert alert-danger">
+                <span><b>Sorry!</b> - @TempData["Error"] </span>
+            </div>
+        }
+
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-action="Register">
+                    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+                    @Html.FormGroupFor(m => m.EmailAddress)
+                    <form-input asp-for="Password"></form-input>
+                    <form-input asp-for="ConfirmPassword"></form-input>
+
+
+                    <div class="form-group">
+                        <input class="btn btn-outline-success float-right" type="submit" value="Sign up" />
+                        <a class="btn btn-outline-secondary" asp-controller="Race" asp-action="Index">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+﻿@using CalisthenicsApp.ViewModels
+@model LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+<div class="row">
+    <div class="col-md-6 offset-3">
+        <p>
+            <h4>Log in to your account</h4>
+        </p>
+        @if (TempData["Error"] != null)
+        {
+            <div class="col-md-12 alert alert-danger">
+                <span><b>Sorry!</b> - @TempData["Error"]</span>
+            </div>
+        }
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form id="loginForm" asp-action="Login" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.EmailAddress, new { @class = "control-label" })
+                        @Html.TextBoxFor(m => m.EmailAddress, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.EmailAddress, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-outline-success float-right" id="loginButton">Log in</button>
+                        <a class="btn btn-outline-secondary" asp-controller="Club" asp-action="Index">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Emoji container -->
+<div id="emojiContainer" style="position: absolute; top: 100px; left: 50%; transform: translateX(-50%); font-size: 50px; display: none;">
+    😀
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    document.getElementById('loginButton').addEventListener('click', function () {
+        // Show the emoji
+        $('#emojiContainer').show().animate({
+            top: '+=30px'  // Emoji'yi 30px aşağıya kaydırıyoruz
+        }, 500, function() {
+            // After animation, hide the emoji
+            $(this).fadeOut();
+        });
+
+        Swal.fire({
+            title: 'Logging in...',
+            text: 'Please wait while we process your login.',
+            icon: 'info',
+            showConfirmButton: false,
+            allowOutsideClick: false,
+            timer: 2000 // Close after 2 seconds
+        }).then(() => {
+            document.getElementById('loginForm').submit();
+        });
+    });
+</script>

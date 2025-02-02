@@ -1,0 +1,61 @@
+﻿@using CalisthenicsApp.ViewModels
+@model List<UserViewModel>
+
+<div class="container">
+    <table id="usersTable" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Profile Image</th>
+                <th>Username</th>
+                
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- AJAX ile veri yüklenecek -->
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css">
+
+<script>
+    $(document).ready(function () {
+        $('#usersTable').DataTable({
+            "serverSide": true,  // Server-side paging aktif
+            "ajax": {
+                "url": "/User/GetPagedUsers", // Backend'ten veri almak için endpoint
+                "type": "GET",  // Veri çekme türü
+                "data": function (d) {
+                    // DataTables'tan gelen parametreler backend'e gönderilir
+                    d.draw = d.draw;
+                    d.start = d.start;
+                    d.length = d.length;
+                },
+                "dataSrc": function (json) {
+                    // Backend'ten gelen veriyi DataTables formatına uygun hale getiriyoruz
+                    return json.data;
+                }
+            },
+            "columns": [
+                {
+                    "data": "profileImage",
+                    "render": function (data) {
+                        // Profil resmi için img tag'ını döndürüyoruz
+                        return "<img src='" + data + "' alt='Profile Image' style='width:50px; height:50px;'>";
+                    }
+                },
+                { "data": "userName" }, // Kullanıcı adı
+                
+                { "data": "actions", "orderable": false, "searchable": false }  // Action butonları
+            ],
+            "paging": true,  // Sayfalama aktif
+            "searching": true,  // Arama aktif
+            "ordering": true,  // Sıralama aktif
+            "lengthMenu": [5, 10, 25],  // Sayfa başına gösterilecek kayıt sayısı
+            "dom": '<"top"i>rt<"bottom"lp><"clear">'  // DataTables düzeni
+        });
+    });
+</script>
