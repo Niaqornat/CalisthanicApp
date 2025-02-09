@@ -18,6 +18,7 @@ namespace CalisthenicsApp.Controllers
             _photoService = photoService;
         }
         [HttpGet("users")]
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             var users = await _userRepository.GetAllUsers();
@@ -37,6 +38,7 @@ namespace CalisthenicsApp.Controllers
             return View(result);
         }
         [HttpGet]
+        [Authorize]
         public IActionResult GetUserData(int page = 1, int pageSize = 10)
         {
             var users = _userRepository.GetPagedUsers(page, pageSize);  // Sayfalı veriyi çekiyoruz
@@ -53,6 +55,7 @@ namespace CalisthenicsApp.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetPagedUsers(int draw, int start, int length)
         {
             try
