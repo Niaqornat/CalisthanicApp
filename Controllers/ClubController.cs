@@ -40,6 +40,7 @@ namespace CalisthenicsApp.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Create(CreateClubViewModel clubVM)
         {
             if (ModelState.IsValid)
@@ -87,6 +88,7 @@ namespace CalisthenicsApp.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Edit(int id, EditClubViewModel clubVM)
         {
             if (!ModelState.IsValid)
@@ -139,6 +141,7 @@ namespace CalisthenicsApp.Controllers
         }
 
         [HttpPost, ActionName("Delete")]
+        [Authorize]
         public async Task<IActionResult> DeleteClub(int id)
         {
             var clubDetails = await _clubRepository.GetByIdAsync(id);
