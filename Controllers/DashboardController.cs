@@ -59,6 +59,7 @@ namespace CalisthenicsApp.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> EditUserProfile(EditUserDashboardViewModel editVM)
         {
             if (!ModelState.IsValid)
